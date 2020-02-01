@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Intro from "../components/intro"
@@ -11,7 +11,7 @@ import AboutMe from "../components/aboutMe"
 const IndexPage = () => (
  
   <Layout>
-    
+
     <Hero />
     <Intro />
     <FeaturedPlaces />
