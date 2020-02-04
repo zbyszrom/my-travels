@@ -1,4 +1,7 @@
 import React from 'react'
+import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+import Place from "./place"
 
  const FeaturedPlaces = () => {
     return (
