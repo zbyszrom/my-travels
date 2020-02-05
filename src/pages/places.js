@@ -1,9 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout'
+import PlacesComp from '../components/placesComp'
 const Places = () => {
     return (
         <Layout>
-           <h3>These are places</h3> 
+           <PlacesComp/>
         </Layout>
     )
 }
