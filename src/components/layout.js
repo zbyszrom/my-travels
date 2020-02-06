@@ -8,6 +8,7 @@
 import React from "react"
 import NavBar from "./navBar"
 import Footer from "./footer"
+import '../styles/layout.scss'
 
 const Layout = ({ children }) => {
   

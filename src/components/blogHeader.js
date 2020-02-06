@@ -23,12 +23,12 @@ query headerImage {
 
 const BlogHeader = () => {
     const {data} = useStaticQuery(getHeader)
-    
+    const headImg = data.edges
 return(
     <section>
     <h3>Blog</h3> 
-     <Img fluid =  {data.edges[1].node.childImageSharp.fluid} /> 
-     <Img fluid =  {data.edges[0].node.childImageSharp.fluid} /> 
+     <Img fluid =  {headImg[1].node.childImageSharp.fluid} /> 
+     <Img fluid =  {headImg[0].node.childImageSharp.fluid} /> 
     </section>
 )
 
