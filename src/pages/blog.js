@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
+import BlogHeader from '../components/blogHeader'
 const Blog = () => {
     return (
         
         <Layout>
-        <h3>Blog</h3> 
+            <BlogHeader />
+        
         </Layout>
            
         
