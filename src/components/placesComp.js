@@ -33,7 +33,6 @@ const Places = ( )=> {
     {places.map(({node}) => {
       return < Place key={node.id} place = {node} />
     }
-
     )}
     </section>
     )

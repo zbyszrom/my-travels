@@ -1,0 +1,51 @@
+const path = require("path")
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const { data1 } = await graphql(`
+    query {
+      places: allDatoCmsPlace {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+  data1.places.edges.forEach(({ node }) => {
+    createPage({
+      path: `places/${node.slug}`,
+      component: path.resolve("./src/templates/place.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+}
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const { data2 } = await graphql(`
+    query {
+      posts: allDatoCmsPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+  data2.posts.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.slug}`,
+      component: path.resolve("./src/templates/post.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+
+}
